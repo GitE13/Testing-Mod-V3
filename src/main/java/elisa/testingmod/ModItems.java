@@ -3,6 +3,7 @@ package elisa.testingmod;
 import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
 import net.fabricmc.fabric.api.registry.CompostableRegistry;
 import net.fabricmc.fabric.api.registry.FuelValueEvents;
+import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -10,11 +11,18 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.component.Consumable;
+import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.item.component.ItemLore;
+import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 
 import java.util.List;
 import java.util.function.Function;
@@ -31,9 +39,25 @@ public class ModItems {
         Registry.register(BuiltInRegistries.ITEM, itemKey, item);
 
         return item;
-    }
+    } // Generates an item from a name, item factory, and item properties
+
+    public static Consumable GENERATE_CONSUMABLE_COMPONENT(Holder<MobEffect> effect, int duration, int amplifier, float probability) {
+        return Consumables.defaultFood()
+                .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(effect, duration, amplifier), probability))
+                .build();
+    } // Generates a component for a food item that gives an effect when consumed.
+
+    public static final FoodProperties FOOD_ALWAYS_COMPONENT = new FoodProperties.Builder()
+            .alwaysEdible()
+            .build();
+
 
     public static final Item SUSPICIOUS_SUBSTANCE = register("suspicious_substance", Item::new, new Item.Properties());
+    public static final Item POISONOUS_APPLE = register(
+            "poisonous_apple",
+            Item::new,
+            new Item.Properties().food(FOOD_ALWAYS_COMPONENT, GENERATE_CONSUMABLE_COMPONENT(MobEffects.POISON, 20*6, 1, 1.0f))
+    );
 
     public static void initialize() {
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, CUSTOM_CREATIVE_TAB_KEY, CUSTOM_CREATIVE_TAB);
@@ -52,6 +76,7 @@ public class ModItems {
             .title(Component.translatable("creativeTab.testingmodv3"))
             .displayItems((params, output) -> {
                 output.accept(ModItems.SUSPICIOUS_SUBSTANCE);
+                output.accept(ModItems.POISONOUS_APPLE);
 
                 // The tab builder also accepts Blocks
                 //output.accept(ModBlocks.CONDENSED_DIRT);

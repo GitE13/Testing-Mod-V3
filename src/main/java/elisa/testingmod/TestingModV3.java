@@ -15,5 +15,6 @@ public class TestingModV3 implements ModInitializer {
 		TestingModV3.LOGGER.info("Initializing " + MOD_ID);
 
 		ModItems.initialize();
+		ModPotions.initialize();
 	}
 }

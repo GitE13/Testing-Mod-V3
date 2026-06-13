@@ -1,0 +1,20 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "minecraft:potion": 1
+    },
+    "minecraft:custom": {
+      "minecraft:interact_with_brewingstand": 3,
+      "minecraft:sprint_one_cm": 350,
+      "minecraft:time_since_rest": 1365,
+      "minecraft:walk_one_cm": 74,
+      "minecraft:total_world_time": 1559,
+      "minecraft:leave_game": 1,
+      "minecraft:fly_one_cm": 1002,
+      "minecraft:play_time": 1365,
+      "minecraft:jump": 7,
+      "minecraft:time_since_death": 1365
+    }
+  },
+  "DataVersion": 4790
+}

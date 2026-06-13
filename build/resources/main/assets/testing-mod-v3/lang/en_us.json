@@ -1,4 +1,9 @@
 {
   "item.testing-mod-v3.suspicious_substance": "Suspicious Substance",
-  "creativeTab.testingmodv3": "TestingModV3 Items"
+  "creativeTab.testingmodv3": "TestingModV3 Items",
+  "item.testing-mod-v3.poisonous_apple": "Poisonous Apple",
+  "item.minecraft.potion.effect.suspicious_potion": "Potion of Suspiciousness",
+  "item.minecraft.splash_potion.effect.suspicious_potion": "Splash Potion of Suspiciousness",
+  "item.minecraft.lingering_potion.effect.suspicious_potion": "Lingering Potion of Suspiciousness",
+  "item.minecraft.tipped_arrow.effect.suspicious_potion": "Arrow of Suspiciousness"
 }

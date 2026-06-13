@@ -3,3 +3,5 @@
 /advancement grant Player88 everything
 /advancement grant Player945 everything
 /advancement grant @a everything
+/give Player548 testing-mod-v3:poisonous_apple
+/tick sprint 10s

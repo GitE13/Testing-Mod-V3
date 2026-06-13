@@ -1,0 +1,16 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 327,
+      "minecraft:total_world_time": 327,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 327,
+      "minecraft:jump": 1,
+      "minecraft:time_since_death": 327
+    },
+    "minecraft:used": {
+      "testing-mod-v3:poisonous_apple": 1
+    }
+  },
+  "DataVersion": 4790
+}
