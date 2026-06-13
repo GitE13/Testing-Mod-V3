@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "# #"
+  ],
+  "key": {
+    "#": "minecraft:blaze_rod"
+  },
+  "result": {
+    "id": "testing-mod-v3:guidite_helmet"
+  }
+}

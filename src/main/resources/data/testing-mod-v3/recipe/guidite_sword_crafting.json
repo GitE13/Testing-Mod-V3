@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#",
+    "o"
+  ],
+  "key": {
+    "#": "minecraft:blaze_rod",
+    "o": "minecraft:diamond"
+  },
+  "result": {
+    "id": "testing-mod-v3:guidite_sword"
+  }
+}

@@ -5,5 +5,11 @@
   "item.minecraft.potion.effect.suspicious_potion": "Potion of Suspiciousness",
   "item.minecraft.splash_potion.effect.suspicious_potion": "Splash Potion of Suspiciousness",
   "item.minecraft.lingering_potion.effect.suspicious_potion": "Lingering Potion of Suspiciousness",
-  "item.minecraft.tipped_arrow.effect.suspicious_potion": "Arrow of Suspiciousness"
+  "item.minecraft.tipped_arrow.effect.suspicious_potion": "Arrow of Suspiciousness",
+  "item.testing-mod-v3.iron_golem_spawn_egg": "Iron Golem Spawn Egg",
+  "item.testing-mod-v3.guidite_sword": "Guidite Sword",
+  "item.testing-mod-v3.guidite_helmet": "Guidite Helmet",
+  "item.testing-mod-v3.guidite_chestplate": "Guidite Chestplate",
+  "item.testing-mod-v3.guidite_leggings": "Guidite Leggings",
+  "item.testing-mod-v3.guidite_boots": "Guidite Boots"
 }

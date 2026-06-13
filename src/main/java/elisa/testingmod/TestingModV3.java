@@ -1,5 +1,7 @@
 package elisa.testingmod;
 
+import elisa.testingmod.item.ModItems;
+import elisa.testingmod.potion.ModPotions;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;

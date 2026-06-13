@@ -1,7 +1,0 @@
-/give Player281 testing-mod-v3:suspicious_substance
-/advancement grant Player652 everything
-/advancement grant Player88 everything
-/advancement grant Player945 everything
-/advancement grant @a everything
-/give Player548 testing-mod-v3:poisonous_apple
-/tick sprint 10s
