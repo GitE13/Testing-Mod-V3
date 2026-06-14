@@ -2,6 +2,7 @@ package elisa.testingmod.item;
 
 import elisa.testingmod.TestingModV3;
 import elisa.testingmod.item.Armor.GuiditeArmorMaterial;
+import elisa.testingmod.item.custom.LightningStick;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
 import net.fabricmc.fabric.api.registry.CompostableRegistry;
@@ -116,6 +117,11 @@ public class ModItems {
             new Item.Properties().humanoidArmor(GuiditeArmorMaterial.INSTANCE, ArmorType.BOOTS)
                     .durability(ArmorType.BOOTS.getDurability(GuiditeArmorMaterial.BASE_DURABILITY))
     );
+    public static final LightningStick LIGHTNING_STICK = register(
+            "lightning_stick",
+            LightningStick::new,
+            new Item.Properties().stacksTo(1).durability(128));
+
 
     public static void initialize() {
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, CUSTOM_CREATIVE_TAB_KEY, CUSTOM_CREATIVE_TAB);
@@ -124,8 +130,8 @@ public class ModItems {
             builder.add(ModItems.SUSPICIOUS_SUBSTANCE, 30 * 20);
         });
 
-        add_item_to_menu(CreativeModeTabs.SPAWN_EGGS, ModItems.Iron_GOLEM_SPAWN_EGG);
-        add_item_to_menu(CreativeModeTabs.COMBAT, new Item[]{ModItems.GUIDITE_HELMET, ModItems.GUIDITE_CHESTPLATE, ModItems.GUIDITE_LEGGINGS, ModItems.GUIDITE_BOOTS, ModItems.GUIDITE_SWORD});
+        add_item_to_menu(CreativeModeTabs.SPAWN_EGGS, Iron_GOLEM_SPAWN_EGG);
+        add_item_to_menu(CreativeModeTabs.COMBAT, new Item[]{GUIDITE_HELMET, GUIDITE_CHESTPLATE, GUIDITE_LEGGINGS, GUIDITE_BOOTS, GUIDITE_SWORD, LIGHTNING_STICK});
 
     }
 
