@@ -2,6 +2,7 @@ package elisa.testingmod.item;
 
 import elisa.testingmod.TestingModV3;
 import elisa.testingmod.item.Armor.GuiditeArmorMaterial;
+import elisa.testingmod.item.custom.Counter;
 import elisa.testingmod.item.custom.LightningStick;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
@@ -103,14 +104,12 @@ public class ModItems {
             new Item.Properties().humanoidArmor(GuiditeArmorMaterial.INSTANCE, ArmorType.CHESTPLATE)
                     .durability(ArmorType.CHESTPLATE.getDurability(GuiditeArmorMaterial.BASE_DURABILITY))
     );
-
     public static final Item GUIDITE_LEGGINGS = register(
             "guidite_leggings",
             Item::new,
             new Item.Properties().humanoidArmor(GuiditeArmorMaterial.INSTANCE, ArmorType.LEGGINGS)
                     .durability(ArmorType.LEGGINGS.getDurability(GuiditeArmorMaterial.BASE_DURABILITY))
     );
-
     public static final Item GUIDITE_BOOTS = register(
             "guidite_boots",
             Item::new,
@@ -121,6 +120,10 @@ public class ModItems {
             "lightning_stick",
             LightningStick::new,
             new Item.Properties().stacksTo(1).durability(128));
+    public static final Counter COUNTER = register(
+            "counter",
+            Counter::new,
+            new Item.Properties());
 
 
     public static void initialize() {
@@ -144,6 +147,7 @@ public class ModItems {
             .displayItems((params, output) -> {
                 output.accept(ModItems.SUSPICIOUS_SUBSTANCE);
                 output.accept(ModItems.POISONOUS_APPLE);
+                output.accept(ModItems.COUNTER);
 
                 // The tab builder also accepts Blocks
                 //output.accept(ModBlocks.CONDENSED_DIRT);

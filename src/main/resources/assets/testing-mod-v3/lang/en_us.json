@@ -12,5 +12,10 @@
   "item.testing-mod-v3.guidite_chestplate": "Guidite Chestplate",
   "item.testing-mod-v3.guidite_leggings": "Guidite Leggings",
   "item.testing-mod-v3.guidite_boots": "Guidite Boots",
-  "item.testing-mod-v3.lightning_stick": "Lightning Stick"
+  "item.testing-mod-v3.lightning_stick": "Lightning Stick",
+  "enchantment.testing-mod-v3.thundering": "Thundering",
+  "item.testing-mod-v3.counter": "Counter",
+  "item.testing-mod-v3.counter.info": "Used %1$s times",
+  "item.testing-mod-v3.temperature.info": "Temperature: %1$s degrees",
+  "item.testing-mod-v3.burnt.info": "Burnt: %1$s"
 }
